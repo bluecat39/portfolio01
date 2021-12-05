@@ -1,0 +1,216 @@
+@media screen and (min-width: 900px) {
+  /*ヘッダー*/
+  div.logo {
+    position: absolute;
+    top: 20px;
+    left: 35px;
+  }
+  #hamburger {
+    top: 20px;
+    right: 40px;
+    width: 40px;
+    height: 35.2px;
+  }
+  .inner_line {
+    width: 40px;
+    height: 2px;
+  }
+  #line2 {
+    top: 16px;
+  }
+  .line_1 {
+    -webkit-transform: translateY(17px) rotate(-45deg);
+    transform: translateY(17px) rotate(-45deg);
+    top: 0;
+  }
+  .line_2 {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    opacity: 0;
+  }
+  .line_3 {
+    -webkit-transform: translateY(-16px) rotate(45deg);
+    transform: translateY(-16px) rotate(45deg);
+    bottom: 0;
+  }
+
+  /*サイドバー*/
+  .side-bar {
+    position: fixed;
+    bottom: 10%;
+    right: -2px;
+    display: flex;
+    flex-direction: row;
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: tb-lr;
+    writing-mode: vertical-lr;
+    -webkit-text-orientation: upright;
+    text-orientation: upright;
+    text-align: center;
+    border: solid 1px rgb(255, 255, 255);
+    transform: translateX(50%);
+    opacity: 0;
+    transition: all 0.25s ease-out;
+  }
+  .sideBar_show {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  .side-bar a {
+    display: block;
+    height: 165px;
+    padding: 0px 15px;
+    font-family: "Yu Gothic";
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+  }
+  [href="#top"] {
+    border-top: solid 1px white;
+  }
+  .side-bar a:hover {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+  }
+
+  /*メインビジュアル*/
+  .main_visual div img {
+    display: block;
+    width: calc(100% / 3);
+    height: 100vh;
+  }
+
+  /* タイトル */
+  h1.main_theme {
+    margin: 100px 0 100px 0;
+    font-size: 100px;
+    line-height: 125px;
+    color: white;
+  }
+  .theme_br {
+    display: none;
+  }
+
+  /* コンテンツ */
+  .information {
+    margin-bottom: 140px;
+  }
+  .information h2 {
+    font-size: 60px;
+  }
+  .information .day_en,
+  .day_ja {
+    font-size: 18px;
+  }
+  .day_en span {
+    font-size: 24px;
+  }
+  .information .place {
+    font-size: 40px;
+  }
+
+  .gallery {
+    width: 100%;
+    padding: 0 15px;
+    margin-bottom: 480px;
+  }
+  .gallery h2 {
+    margin-bottom: 45px;
+    font-size: 60px;
+  }
+  .gallery ul li {
+    margin-top: 30px;
+  }
+  .gallery ul li:nth-of-type(1) {
+    margin-top: 0px;
+  }
+  .gallery ul li:nth-child(odd) {
+    text-align: left;
+  }
+  .gallery ul li:nth-child(even) {
+    text-align: right;
+  }
+  .gallery ul li img {
+    width: 50%;
+    height: auto;
+    object-position: center;
+    object-fit: cover;
+    padding: 0 15px;
+  }
+
+  .access {
+    margin-bottom: 480px;
+  }
+  .access h2 {
+    font-size: 60px;
+  }
+
+  .contact {
+    width: 100%;
+  }
+  .contact h2 {
+    font-size: 60px;
+  }
+  div.contact_link {
+    width: 400px;
+    position: relative;
+  }
+  div.contact_link::before {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    top: 60%;
+    right: -40px;
+    cursor: pointer;
+    transform: traslateX(0);
+    transition: all 0.25s ease-out;
+  }
+  div.contact_link::after {
+    content: '';
+    display: inline;
+    width: 1px;
+    height: 15px;
+    background-color: white;
+    position: absolute;
+    bottom: 40%;
+    right: -40px;
+    cursor: pointer;
+    transform: translate(-6px,4px) rotate(-60deg);
+    transition: all 0.25s ease-out;
+  }
+  div.contact_link:hover::before {
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: translateX(20px);
+  }
+  div.contact_link:hover::after {
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: translate(14px,4px) rotate(-60deg);
+  }
+
+  /* フッター*/
+  footer {
+    width: 100%;
+    padding: 80px 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer_info {
+    width: auto;
+    flex-grow: 0;
+  }
+  .footer_info-inter {
+    margin: 30px 0 0 0;
+  }
+  .footer_poli {
+    width: auto;
+    flex-grow: 0;
+    display: flex;
+    align-items: flex-end;
+  }
+}
